@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>portrait face game</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="face protrait javascript click game">
+    <meta name="keywords" content="famous painting portraits">
+    <meta name="author" content="Chris Campbell">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="clickgame.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <button class="btn btn-block" onclick="countdown()"><h2>Click to play!</h2></button>
+        <p class="lead">you have 20 seconds to click as many faces as you can.</p>
+    </div>
+    
+</div>
+
+
+  <div class="table-responsive">
+    <table id="game-table" class="table table-bordered">
+        <tr>
+            <td><img id="freud" class="img-responsive" src="lucienfreud.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="warhol" class="img-responsive" src="warhol.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="vangogh" class="img-responsive" src="vangogh.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="frida" class="img-responsive" src="frida_kahlo.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="sarandon" class="img-responsive" src="sarandon.jpg" onclick="countup(); this.onclick=null"></td>
+
+        <tr>
+            <td><img id="vincelow2" class="img-responsive" src="vincelow2.jpg" onclick="countup(); this.onclick=null"></td>
+
+            <td><img id="freud2" class="img-responsive" src="lucienfreud2.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="vermeer" class="img-responsive" src="vermeer.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="vincelow" class="img-responsive" src="vincelow.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="picasso" class="img-responsive" src="picasso.jpg" onclick="countup(); this.onclick=null"></td>
+            
+        </tr>
+        <tr>
+            <td><img id="mondrian" class="img-responsive" src="pietmondrian.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="roy2" class="img-responsive" src="roylichenstein2.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="monalisa" class="img-responsive" src="Mona_Lisa.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="vangogh2" class="img-responsive" src="vangogh2.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="freud4" class="img-responsive" src="lucienfreud4.jpg" onclick="countup(); this.onclick=null"></td>
+        </tr>
+        <tr>
+            <td><img id="oncer" class="img-responsive" src="oncer.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="freud3" class="img-responsive" src="lucienfreud3.jpg" onclick="countup(); this.onclick=null"></td>
+            
+            
+            <td><img id="roy" class="img-responsive" src="roylichenstein.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="vandongen" class="img-responsive" src="vandongen.jpg" onclick="countup(); this.onclick=null"></td>
+            <td><img id="jerry" class="img-responsive" src="jerry.jpg" onclick="countup(); this.onclick=null"></td> 
+        </tr>
+        
+    </table>
+      
+     </div>
+</div>
+</body>
+</html>
