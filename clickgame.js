@@ -6,7 +6,7 @@ $(document).ready(function(){
   $(".img-responsive").on("click", function(){
     if($(this).attr("disabled")){
       return;
-    } else {
+    }else{
       $(this).removeClass("on").addClass("off").attr("disabled", true);
       pointCountup();
     }
@@ -16,12 +16,12 @@ $(document).ready(function(){
     scoreCounter =0;
     //need images to be re-enabled on click to play again w/out refreshing
     $(".img-responsive").attr("disabled", false).removeClass("off").addClass("on");
-    
+
     gameCountdown();
   });
 
   function pointCountup(){
-    scoreCounter++
+    scoreCounter++;
   };
 
   function gameCountdown(){
