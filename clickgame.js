@@ -32,9 +32,3 @@ $(document).ready(function(){
     }, 3000);
   };
 });
-//add jQuery +
-//add doc ready +
-//add click event to button that starts countdown +
-//add click event to img-responsives that runs pointCountup function+
-// += and disables image from being clicked again +
-//make end alert a modal +

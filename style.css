@@ -2,6 +2,9 @@
     height: 300px;
     width: 220px;
 }
+.btn-block {
+  font-size: 30px;
+}
 .on{
   border: 5px solid green;
 }
