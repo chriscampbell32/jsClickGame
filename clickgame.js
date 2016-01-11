@@ -27,4 +27,4 @@ $(document).ready(function(){
 //add click event to button that starts countdown +
 //add click event to img-responsives that runs countup function+
 // += and disables image from being clicked again +
-//make end alert a modal
+//make end alert a modal +
