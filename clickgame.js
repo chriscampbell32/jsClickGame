@@ -1,30 +1,38 @@
 $(document).ready(function(){
-  var counter = 0;
+  var scoreCounter = 0;
   $("td img").addClass("img-responsive");
-  
+  $(".img-responsive").attr("disabled", true);
+
   $(".img-responsive").on("click", function(){
-    countup();
-    $(this).off("click");
+    if($(this).attr("disabled")){
+      return;
+    } else {
+      pointCountup();
+      $(this).off("click");
+    }
   });
 
   $(".btn-block").on("click", function(){
-    countdown();
-  })
+    scoreCounter =0;
+    $(".img-responsive").attr("disabled", false);
+    gameCountdown();
+  });
 
-  function countup(){
-    counter++;
+  function pointCountup(){
+    scoreCounter++
   };
 
-  function countdown(){
-    setTimeout(function countandgive(){
-      $(".modal-body").append("<p>Time is up, you clicked " +counter+ " portraits!</p>");
+  function gameCountdown(){
+    setTimeout(function countAndGive(){
+      $(".modal-body").empty();
+      $(".modal-body").append("<p>Time is up, you clicked " + scoreCounter + " portraits!</p>");
       $("#resultModal").modal("show");
-    }, 20000);
+    }, 3000);
   };
 });
 //add jQuery +
 //add doc ready +
 //add click event to button that starts countdown +
-//add click event to img-responsives that runs countup function+
+//add click event to img-responsives that runs pointCountup function+
 // += and disables image from being clicked again +
 //make end alert a modal +
