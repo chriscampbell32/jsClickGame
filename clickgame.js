@@ -7,14 +7,16 @@ $(document).ready(function(){
     if($(this).attr("disabled")){
       return;
     } else {
+      $(this).removeClass("on").addClass("off").attr("disabled", true);
       pointCountup();
-      $(this).off("click");
     }
   });
 
   $(".btn-block").on("click", function(){
     scoreCounter =0;
-    $(".img-responsive").attr("disabled", false);
+    //need images to be re-enabled on click to play again w/out refreshing
+    $(".img-responsive").attr("disabled", false).removeClass("off").addClass("on");
+    
     gameCountdown();
   });
 
