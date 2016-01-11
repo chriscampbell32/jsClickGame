@@ -1,5 +1,6 @@
-//$(document).ready(function(){
+$(document).ready(function(){
   var counter = 0;
+  $("td img").addClass("img-responsive");
   
   $(".img-responsive").on("click", function(){
     countup();
@@ -18,7 +19,7 @@
       alert("Time is up, you clicked " +counter+ " portraits!");
     }, 20000);
   };
-//});
+});
 //add jQuery +
 //add doc ready +
 //add click event to button that starts countdown +
