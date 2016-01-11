@@ -17,7 +17,8 @@ $(document).ready(function(){
 
   function countdown(){
     setTimeout(function countandgive(){
-      alert("Time is up, you clicked " +counter+ " portraits!");
+      $(".modal-body").append("<p>Time is up, you clicked " +counter+ " portraits!</p>");
+      $("#resultModal").modal("show");
     }, 20000);
   };
 });
@@ -25,5 +26,5 @@ $(document).ready(function(){
 //add doc ready +
 //add click event to button that starts countdown +
 //add click event to img-responsives that runs countup function+
-// += and disables image from being clicked again
+// += and disables image from being clicked again +
 //make end alert a modal
