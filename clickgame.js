@@ -1,6 +1,6 @@
 var counter = 0;
 function countup(){
-  counter = counter + 1;
+  counter++;
 };
 
 function countdown(){
