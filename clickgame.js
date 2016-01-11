@@ -29,6 +29,6 @@ $(document).ready(function(){
       $(".modal-body").empty();
       $(".modal-body").append("<p>Time is up, you clicked " + scoreCounter + " portraits!</p>");
       $("#resultModal").modal("show");
-    }, 3000);
+    }, 20000);
   };
 });
