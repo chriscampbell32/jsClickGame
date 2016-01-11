@@ -4,6 +4,7 @@ $(document).ready(function(){
   
   $(".img-responsive").on("click", function(){
     countup();
+    $(this).off("click");
   });
 
   $(".btn-block").on("click", function(){
