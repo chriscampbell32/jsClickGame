@@ -26,8 +26,8 @@ $(document).ready(function(){
 
   function gameCountdown(){
     setTimeout(function countAndGive(){
-      $(".modal-body").empty();
-      $(".modal-body").append("<p>Time is up, you clicked " + scoreCounter + " portraits!</p>");
+      $("#resultModal .modal-body").empty();
+      $("#resultModal .modal-body").append("<p>Time is up, you clicked " + scoreCounter + " portraits!</p>");
       $("#resultModal").modal("show");
     }, 20000);
   };
