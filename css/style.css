@@ -11,3 +11,11 @@
 .off{
   border: 5px solid maroon;
 }
+.modal-body>.img-responsive{
+  width: auto;
+}
+.btn-success{
+  left: 80%;
+  top: 95%;
+  position: fixed;
+}
