@@ -1,17 +1,17 @@
 .img-responsive {
-    height: 300px;
-    width: 220px;
+  height: 300px;
+  width: 220px;
 }
 .btn-block {
   font-size: 30px;
 }
-.on{
+.gameOn{
   border: 5px solid green;
 }
-.off{
+.gameOff{
   border: 5px solid maroon;
 }
-.modal-body>.img-responsive{
+#verifyModal>.img-responsive{
   width: auto;
 }
 .btn-success{
