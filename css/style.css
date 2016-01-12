@@ -1,0 +1,21 @@
+.img-responsive {
+  height: 300px;
+  width: 220px;
+}
+.btn-block {
+  font-size: 30px;
+}
+.gameOn{
+  border: 5px solid green;
+}
+.gameOff{
+  border: 5px solid maroon;
+}
+#verifyModal .img-responsive{
+  width: auto;
+}
+.btn-success{
+  left: 80%;
+  top: 95%;
+  position: fixed;
+}

@@ -1,63 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>portrait face game</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="face protrait javascript click game">
-    <meta name="keywords" content="famous painting portraits">
-    <meta name="author" content="Chris Campbell">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="clickgame.js"></script>
+  <title>portrait face game</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="face portrait javascript click game">
+  <meta name="keywords" content="famous painting portraits">
+  <meta name="author" content="Chris Campbell">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <div class="jumbotron">
-        <button class="btn btn-block" onclick="countdown()"><h2>Click to play!</h2></button>
-        <p class="lead">you have 20 seconds to click as many faces as you can.</p>
+  <div class="jumbotron">
+    <div class="container">
+      <button class="btn btn-block">
+        Click to play!
+      </button>
+      <p>you have 20 seconds to click as many faces as you can.</p>
+      <h2>Score: <span class="score"></span></h2>
     </div>
-    
-</div>
+  </div>
+  <div class="container-fluid">
+    <!-- verified by modal -->
+    <div class="row"> 
+      <button class="btn btn-success" type="button" data-toggle="modal" data-target="#verifyModal">Verified By:</button>
+      <div class="modal fade bs-example-modal-sm" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Stephanie Harris Verified</h4>
+            </div>
+            <div class="modal-body">
+              I declare this page error-free
+              <img src="images/stephVerified.png" class="img-responsive" alt="selfie of Stephanie">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="table-responsive">
+        <table id="game-table" class="table table-bordered">
+          <tr>
+            <td>
+              <img id="freud" src="images/lucienfreud.jpg" alt="lucienfreud portrait"></td>
+            <td>
+              <img id="warhol" src="images/warhol.jpg" alt="warhol portrait"></td>
+            <td>
+              <img id="vangogh" src="images/vangogh.jpg" alt="van gogh portrait"></td>
+            <td>
+              <img id="frida" src="images/frida_kahlo.jpg" alt="frida kahlo portrait"></td>
+            <td>
+              <img id="sarandon" src="images/sarandon.jpg" alt="susan sarandon portrait"></td>
+          </tr>
+          <tr>
+            <td>
+              <img id="vincelow2" src="images/vincelow2.jpg" alt="vince low portrait"></td>
+            <td>
+              <img id="freud2" src="images/lucienfreud2.jpg" alt="another lucien freud portrait"></td>
+            <td>
+              <img id="vermeer" src="images/vermeer.jpg" alt="vermeer portrait"></td>
+            <td>
+              <img id="vincelow" src="images/vincelow.jpg" alt="another vince low portrait"></td>
+            <td>
+              <img id="picasso" src="images/picasso.jpg" alt="picasso portrait"></td>
+          </tr>
+          <tr>
+            <td>
+              <img id="mondrian" src="images/pietmondrian.jpg" alt="piet mondrian portrait"></td>
+            <td>
+              <img id="roy2" src="images/roylichenstein2.jpg" alt="roy lichenstein portrait"></td>
+            <td>
+              <img id="monalisa" src="images/Mona_Lisa.jpg" alt="the Mona Lisa"></td>
+            <td>
+              <img id="vangogh2" src="images/vangogh2.jpg" alt="another van gogh portrait"></td>
+            <td>
+              <img id="freud4" src="images/lucienfreud4.jpg" alt="a third lucien freud portrait"></td>
+          </tr>
+          <tr>
+            <td>
+              <img id="oncer" src="images/oncer.jpg" alt="oncer portrait"></td>
+            <td>
+              <img id="freud3" src="images/lucienfreud3.jpg" alt="lucien freud portrait"></td>
+            <td>
+              <img id="roy" src="images/roylichenstein.jpg" alt="roy lichenstein portrait"></td>
+            <td>
+              <img id="vandongen" src="images/vandongen.jpg" alt="vandongen portrait"></td>
+            <td>
+              <img id="jerry" src="images/jerry.jpg" alt="jerry portrait"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- end result modal -->
+      <div class="modal fade bs-example-modal-sm" id="resultModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Results</h4>
+            </div>
+            <div class="modal-body">
+              <!-- score goes here -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </div>
+  </div>  
 
-
-  <div class="table-responsive">
-    <table id="game-table" class="table table-bordered">
-        <tr>
-            <td><img id="freud" class="img-responsive" src="lucienfreud.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="warhol" class="img-responsive" src="warhol.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="vangogh" class="img-responsive" src="vangogh.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="frida" class="img-responsive" src="frida_kahlo.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="sarandon" class="img-responsive" src="sarandon.jpg" onclick="countup(); this.onclick=null"></td>
-
-        <tr>
-            <td><img id="vincelow2" class="img-responsive" src="vincelow2.jpg" onclick="countup(); this.onclick=null"></td>
-
-            <td><img id="freud2" class="img-responsive" src="lucienfreud2.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="vermeer" class="img-responsive" src="vermeer.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="vincelow" class="img-responsive" src="vincelow.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="picasso" class="img-responsive" src="picasso.jpg" onclick="countup(); this.onclick=null"></td>
-            
-        </tr>
-        <tr>
-            <td><img id="mondrian" class="img-responsive" src="pietmondrian.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="roy2" class="img-responsive" src="roylichenstein2.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="monalisa" class="img-responsive" src="Mona_Lisa.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="vangogh2" class="img-responsive" src="vangogh2.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="freud4" class="img-responsive" src="lucienfreud4.jpg" onclick="countup(); this.onclick=null"></td>
-        </tr>
-        <tr>
-            <td><img id="oncer" class="img-responsive" src="oncer.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="freud3" class="img-responsive" src="lucienfreud3.jpg" onclick="countup(); this.onclick=null"></td>
-            
-            
-            <td><img id="roy" class="img-responsive" src="roylichenstein.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="vandongen" class="img-responsive" src="vandongen.jpg" onclick="countup(); this.onclick=null"></td>
-            <td><img id="jerry" class="img-responsive" src="jerry.jpg" onclick="countup(); this.onclick=null"></td> 
-        </tr>
-        
-    </table>
-      
-     </div>
-</div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/clickgame.js"></script>
 </body>
 </html>
