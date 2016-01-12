@@ -22,6 +22,7 @@ $(document).ready(function(){
 
   function pointCountup(){
     scoreCounter++;
+    $(".score").text(scoreCounter);
   };
 
   function gameCountdown(){
@@ -29,6 +30,10 @@ $(document).ready(function(){
       $("#resultModal .modal-body").empty();
       $("#resultModal .modal-body").append("<p>Time is up, you clicked " + scoreCounter + " portraits!</p>");
       $("#resultModal").modal("show");
+      $("#resultModal").on("hide.bs.modal", function(){
+        $(".score").text("");
+      });
+      $(".img-responsive").attr("disabled", true);
     }, 20000);
   };
 });
