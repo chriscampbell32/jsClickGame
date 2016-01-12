@@ -22,6 +22,7 @@ $(document).ready(function(){
 
   function pointCountup(){
     scoreCounter++;
+    $(".container").append("<h2>Score:" + scoreCounter + "</h2>")
   };
 
   function gameCountdown(){
